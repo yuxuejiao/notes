@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <h2>flex布局的应用</h2>
+    </head>
+    <style>
+        ul,li{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+            width: 500px;
+            height: 50px;
+            background: #ccc;
+            text-align: center;
+            align-items: center;
+        }
+        .container li{
+            flex: 1;
+        }
+        .container2{
+            width: 200px;
+            height: 200px;
+            background: #ccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .container2 .img{
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+        .container3{
+            width: 500px;
+            height: 200px;
+            background: #ccc;
+            display: flex;
+        }
+        .container3 .left{
+            flex: 0 0 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 150px;
+            text-align: center;
+            background: #39b0a0;
+        }
+        .container4{
+            width: 500px;
+            height: 300px;
+            background: #ccc;
+            display: flex;
+            flex-direction: column;
+        }
+        .container4 header, .container4 footer{
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+        .container4 div{
+            display: flex;
+            height: 200px;
+        }
+        .container4 div .left{
+            flex: 0 0 20%;
+            background: #49a9ee;
+            justify-content: center;
+            align-items: center;
+        }
+        .container4 div .right{
+            flex: 0 0 50px;
+            background: aqua;
+            justify-content: center;
+            align-items: center;
+        }
+        .container4 div .center{
+            flex: 1;
+            background: antiquewhite;
+        }
+        .container5{
+            display: flex;
+            flex-direction: column;
+            height: 200px;
+            width: 500px;
+            background: #ccc;
+        }
+        .container5 .main{
+            flex: 1;
+            background: #4b73eb;
+        }
+        .container5 footer{
+            height: 50px;
+            background: #49a9ee;
+        }
+    </style>
+    <body>
+        <h3>demo1：导航栏</h3>
+        <ul class="container">
+            <li>苏宁易购</li>
+            <li>天猫超市</li>
+            <li>天猫国际</li>
+            <li>聚划算</li>
+        </ul>
+        <h3>demo2: 列表常用结构：两端对齐，垂直居中</h3>
+        <div class="container2">
+            <div class="img"></div>
+            <div class="text">
+                <div>第一行</div>
+                <div>第二行</div>
+            </div>
+        </div>
+        <h3>demo3: 左侧导航固定百分比宽度，右侧内容</h3>
+        <div class="container3">
+            <ul class="left">
+                <li>苏宁易购</li>
+                <li>天猫超市</li>
+                <li>天猫国际</li>
+                <li>聚划算</li>
+            </ul>
+            <div class="right">这里是右侧内容，内容区域显示取决于左侧导航啊啊啊啊啊啊</div>
+        </div>
+        <h3>demo4: 常见的网站结构，分为上中下三部分</h3>
+        <div class="container4">
+            <header>头部</header>
+            <div>
+                <div class="left">左侧</div>
+                <div class="center">中间内容</div>
+                <div class="right">右侧</div>
+            </div>
+            <footer>底部</footer>
+        </div>
+        <h3>demo5：底部固定高度</h3>
+        <div class="container5">
+            <div class="main"></div>
+            <footer></footer>
+        </div>
+    </body>
+</html>
